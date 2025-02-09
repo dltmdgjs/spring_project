@@ -6,14 +6,10 @@
 <title>spring project</title>
 </head>
 <body>
-
 <%@ include file="/WEB-INF/views/common/header.jsp"%>
+
+    <h2>회원가입</h2>
+
 <%@ include file="/WEB-INF/views/common/footer.jsp"%>
-    <div id="container">
-        <div id="menuAdmin">
-            <h2 id="menuAdminH2">공지사항</h2>
-            <div id="menuList"></div>
-        </div>
-    </div>
 </body>
 </html>
