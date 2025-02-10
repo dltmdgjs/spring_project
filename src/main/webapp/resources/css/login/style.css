@@ -11,7 +11,7 @@
 }
 
 #login-container{
-    box-shadow: 5px 5px 15px 5px gray;
+    box-shadow: 5px 5px 15px 0px gray;
     padding:40px;
     border-radius: 8px;
     text-align:center;

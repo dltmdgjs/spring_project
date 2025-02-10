@@ -8,8 +8,8 @@
 <body>
 
     <div id="header">
-        <div style="color:red;text-align:left;float:left;cursor:pointer">
-            header
+        <div style="text-align:left;float:left;cursor:pointer">
+            Spring Project
         </div>
     </div>
 
