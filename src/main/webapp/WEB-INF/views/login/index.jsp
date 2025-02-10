@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>spring project</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login/style.css"
 </head>
 <body>
 
@@ -18,7 +19,7 @@
                     <input type="text" id="username" name="username" required/>
                 </div>
                 <div class="input-group">
-                    <label for="password">아이디</label>
+                    <label for="password">패스워드</label>
                     <input type="password" id="password" name="password" required/>
                 </div>
                 <button type="submit" id="login-button">로그인</button>
