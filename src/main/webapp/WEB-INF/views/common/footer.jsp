@@ -7,8 +7,9 @@
 </head>
 <body>
 
-<div id="footer">
-<p style="color:white;text-align:center;">2025 copyright all reserved</p>
-</div>
+    <div id="footer">
+        <p style="color:white;text-align:center;">2025 all rights reserved</p>
+    </div>
+
 </body>
 </html>

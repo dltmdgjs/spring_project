@@ -7,11 +7,11 @@
 </head>
 <body>
 
-<div id="header">
-<div style="color:red;text-align:left;float:left;cursor:pointer">
-header
-</div>
-</div>
+    <div id="header">
+        <div style="color:red;text-align:left;float:left;cursor:pointer">
+            header
+        </div>
+    </div>
 
 </body>
 </html>

@@ -6,7 +6,8 @@
 <title>spring project</title>
 </head>
 <body>
-<%@ include file="/WEB-INF/views/common/header.jsp"%>
+
+    <%@ include file="/WEB-INF/views/common/header.jsp"%>
 
     <div id="login-container-wrapper">
         <div id="login-container">
@@ -28,6 +29,7 @@
         </div>
     </div>
 
-<%@ include file="/WEB-INF/views/common/footer.jsp"%>
+    <%@ include file="/WEB-INF/views/common/footer.jsp"%>
+
 </body>
 </html>
