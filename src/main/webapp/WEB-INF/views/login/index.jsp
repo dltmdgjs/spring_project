@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>spring project</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login/style.css"
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login/style.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 <button type="submit" id="login-button">로그인</button>
             </form>
             <div id="register-link">
-                <a href="${pageContext.request.contextPath}/register">회원가입</a>
+                <a href="${pageContext.request.contextPath}/registerPage">회원가입</a>
             </div>
         </div>
     </div>
