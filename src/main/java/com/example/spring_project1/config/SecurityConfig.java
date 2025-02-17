@@ -39,11 +39,11 @@ public class SecurityConfig {
                         .permitAll()
                         .requestMatchers(HttpMethod.POST,"/login","/register").permitAll()
                         .requestMatchers("/resources/**","/WEB-INF/**").permitAll()
-                        .requestMatchers("/noticerAdd","/noticeModifyPage").hasAnyAuthority("ADMIN","MANAGER")
+                        .requestMatchers("/noticeAdd","/noticeModifyPage").hasAnyAuthority("ADMIN","MANAGER")
                         .requestMatchers(HttpMethod.POST,"/menu/add").hasAnyAuthority("ADMIN","MANAGER")
                         .requestMatchers(HttpMethod.POST,"menu/update").hasAnyAuthority("ADMIN","MANAGER")
                         .requestMatchers(HttpMethod.DELETE,"/menu/delete").hasAnyAuthority("ADMIN","MANAGER")
-                        .anyRequest().authenticated()
+                        .anyRequest().authenticated()//이외 페이지는 로그인 해야 접근가능, 자동으로 로그인 페이지로 리다이렉팅.
                 )
                 .formLogin(
                 login->login.loginPage("/loginPage")
@@ -55,9 +55,9 @@ public class SecurityConfig {
                         .permitAll()
                 )
                 .logout(logout->logout.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("/")
-                        .invalidateHttpSession(true)
-                        .deleteCookies("JSESSIONID")
+                        .logoutSuccessUrl("/")//로그아웃성공후 이 url로 리다이렉팅
+                        .invalidateHttpSession(true)//세션무효화
+                        .deleteCookies("JSESSIONID")//쿠키삭제
                         .permitAll()
                 );
 
@@ -68,6 +68,7 @@ public class SecurityConfig {
     public AuthenticationSuccessHandler authenticationSuccessHandler() {
         return new SimpleUrlAuthenticationSuccessHandler() {
 
+            // 로그인 성공 시.(세션 권한 기능)
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                 HttpSession session = request.getSession();
@@ -79,8 +80,8 @@ public class SecurityConfig {
                 if(isManager) {
                     session.setAttribute("MANAGER", true);
                 }
-                session.setAttribute("username", authentication.getName());
-                session.setAttribute("isAuthenticated", true);
+                session.setAttribute("username", authentication.getName()); // 세션에 로그인 아이디를 저장
+                session.setAttribute("isAuthenticated", true); // 세션에 로그인 여부를 저장
                 response.sendRedirect(request.getContextPath()+"/");
                 super.onAuthenticationSuccess(request,response, authentication);
             }
