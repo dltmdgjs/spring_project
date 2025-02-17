@@ -43,7 +43,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST,"/menu/add").hasAnyAuthority("ADMIN","MANAGER")
                         .requestMatchers(HttpMethod.POST,"menu/update").hasAnyAuthority("ADMIN","MANAGER")
                         .requestMatchers(HttpMethod.DELETE,"/menu/delete").hasAnyAuthority("ADMIN","MANAGER")
-                        .anyRequest().authenticated()//이외 페이지는 로그인 해야 접근가능, 자동으로 로그인 페이지로 리다이렉팅.
+                        .anyRequest().authenticated() //이외 페이지는 로그인 해야 접근가능, 자동으로 로그인 페이지로 리다이렉팅.
                 )
                 .formLogin(
                 login->login.loginPage("/loginPage")

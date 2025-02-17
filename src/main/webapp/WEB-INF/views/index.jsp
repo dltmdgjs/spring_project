@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 <title>spring project</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
@@ -30,5 +32,6 @@
 
     <%@ include file="/WEB-INF/views/common/footer.jsp"%>
 
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/script.js"></script>
 </body>
 </html>
