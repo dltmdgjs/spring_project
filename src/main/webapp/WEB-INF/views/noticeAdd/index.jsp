@@ -21,7 +21,7 @@
                     <h2 id="menuAdminH2">공지사항 작성</h2>
                     <br>
                     <label for="memID">회원아이디</label>
-                    <input type="text" id="memID" placeholder="회원아이디" maxlength="20" value="${username}" disabled>
+                    <input type="text" id="memID" placeholder="회원아이디" maxlength="20" value="${username}" readonly>
                     <br>
                     <label for="title">제목</label>
                     <input type="text" id="title" placeholder="제목" maxlength="10">
@@ -29,10 +29,12 @@
                     <label for="content">내용</label>
                     <input type="text" id="content" placeholder="내용" maxlength="30">
                     <br>
-                    <input type="hidden" id="writer" name="writer">
+                    <label for="content">작성자</label>
+                    <input type="text" id="writer" placeholder="작성자" maxlength="10" value="${writer}" readonly>
+                    <br>
                     <input type="hidden" id="indate" name="indate">
-                    <input type="hidden" id="count" name="count">
 
+                    <!-- 버튼 타입을 button으로 해야 js에서 건들수 있음.-->
                     <button type="button" id="buttonSubmit">확인</button>
                 </div>
             </div>

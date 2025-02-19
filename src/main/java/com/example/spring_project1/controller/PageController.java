@@ -37,7 +37,9 @@ public class PageController {
     }
 
     @GetMapping("/noticeAddPage")
-    public String noticeAddPage() {
+    public String noticeAddPage(Model model, Authentication authentication) {
+        String writer = userService.findWriter(authentication.getName()); //authentication.getName() == username(ID)
+        model.addAttribute("writer", writer);
         return "noticeAdd/index";
     }
 
