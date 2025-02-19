@@ -14,11 +14,13 @@
             Spring Project
         </div>
 
+
         <c:choose>
             <c:when test="${isAuthenticated != null && isAuthenticated == true}">
                 <div style="float:right;">
                     <a href="${pageContext.request.contextPath}/logout">로그아웃</a>
                 </div>
+                <div style="float:right;font-size:12px;margin-right:10px;padding:10px;">반갑습니다 ${requestScope.writer}님</div>
             </c:when>
             <c:otherwise>
                 <div style="float:right;">
