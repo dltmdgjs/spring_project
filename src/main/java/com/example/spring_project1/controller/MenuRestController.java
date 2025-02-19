@@ -10,27 +10,30 @@ import java.time.LocalDate;
 import java.util.List;
 
 // RestApi 개발 시 사용.
-// RestController는 JSON 타입의 데이터를 벡엔드에서 프론트로 전달할 때 사용.
+// RestController는 JSON 타입의 데이터를 벡엔드에서 프론트로 전달할 때 사용.(= @Controller + @ResponseBody)
 // (이전의 Controller는 http기반. 주로 view(페이지)를 반환하기 위해 사용.)
+// (물론 @Controller에서 @ResponseBody 어노테이션을 사용해 데이터를 전달할 수 있지만
+// 데이터를 반환하는 @RestController를 사용함으로써 view를 반환하는 @Controller와 분리 해주는게 좋다.)
 @RestController
 public class MenuRestController {
 
     @Autowired
     private MenuRestService menuRestService;
 
-    // Api
+    // REST API 구성
     //      > Http method(get post update delete)
-    //      > URL
-    //      > Description
+    //      > URI
+    //      > Description(data type)
 
     // 메뉴(모든게시판) 조회 : 모든 게시판을 가져옴
     // ResponseEntity : http 상태코드와 데이터를 반환.(200(성공), 404, 500 ...)
+    // 객체를 ResponseEntity로 감싸 반환.
     @GetMapping("/menu/all")
     public ResponseEntity<List<Menu>>getAllMenus() {
         List<Menu> menus = menuRestService.getLists();
         // 게시글(객체)이 존재하는 경우
         if(menus != null && !menus.isEmpty()) {
-            return ResponseEntity.ok(menus); // 200번(성공)과 데이터(JSON형식)를 위 결로로 넘김
+            return ResponseEntity.ok(menus); // 200번(성공)과 데이터(JSON형식)를 위 경로로 넘김
         } else { // 게시글(객체)이 존재하지 않는 경우
             return ResponseEntity.noContent().build(); // 204번(데이터 존재 X), 빈 데이터 공간을 넘김.
         }
