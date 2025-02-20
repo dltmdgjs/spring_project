@@ -19,7 +19,7 @@ public class PageController {
 
     @GetMapping("/")
     public String home(Model model, Authentication authentication) {
-        if (authentication != null) {
+        if (authentication != null) { // 널 값에 대한 참조 시 nullPointerException 에러 발생.
             String writer = userService.findWriter(authentication.getName());
             model.addAttribute("writer", writer);
         }
