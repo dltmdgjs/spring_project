@@ -10,8 +10,8 @@
 #### 개발 환경
 - os: macOS(Sequoia)
 - envirionment: IntelliJ IDEA, GITHUB
-- framework: Spring Boot (OpenJDK 21)
-- database: MySQL
+- framework: Spring Boot 3.4.2 (OpenJDK-21)
+- database: MySQL 9.2.0
 
 #### 주요 기능
 - 로그인, 로그아웃
