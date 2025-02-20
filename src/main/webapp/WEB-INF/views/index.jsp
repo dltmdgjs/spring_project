@@ -26,7 +26,7 @@
 
 
             <div id="menuList">
-
+                <!-- 자바스크립트로 데이터 fetch 및 태그 삽입 -->
             </div>
         </div>
     </div>
