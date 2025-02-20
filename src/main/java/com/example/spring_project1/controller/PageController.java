@@ -19,8 +19,10 @@ public class PageController {
 
     @GetMapping("/")
     public String home(Model model, Authentication authentication) {
-        String writer = userService.findWriter(authentication.getName());
-        model.addAttribute("writer", writer);
+        if (authentication != null) {
+            String writer = userService.findWriter(authentication.getName());
+            model.addAttribute("writer", writer);
+        }
         return "index";
     }
 

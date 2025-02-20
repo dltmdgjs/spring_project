@@ -20,7 +20,7 @@ public interface MenuRestMapper {
     public void boardDelete(int idx);
     @Update("UPDATE backend_spring_project.menu SET title=#{title}, content=#{content}, writer=#{writer} WHERE idx=#{idx}")
     public void boardUpdate(Menu menu);
-    @Update("UPDATE backend_spring_project.menu SET count=coutn+1 WHERE idx=#{idx}")
+    @Update("UPDATE backend_spring_project.menu SET count=count+1 WHERE idx=#{idx}")
     public void boardCount(int idx);
 
 }
