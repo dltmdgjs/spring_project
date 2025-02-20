@@ -91,82 +91,78 @@
 
 #### 디렉토리 구조
 ```
-├── main
-│   ├── java
-│   │   └── com
-│   │       └── example
-│   │           └── spring_project1
-│   │               ├── SpringProject1Application.java
-│   │               ├── config
-│   │               │   ├── SecurityConfig.java
-│   │               │   └── SwaggerConfig.java
-│   │               ├── controller
-│   │               │   ├── MenuRestController.java
-│   │               │   ├── PageController.java
-│   │               │   └── UserController.java
-│   │               ├── entity
-│   │               │   ├── CustomUser.java
-│   │               │   ├── Menu.java
-│   │               │   ├── Role.java
-│   │               │   └── User.java
-│   │               ├── mapper
-│   │               │   ├── MenuRestMapper.java
-│   │               │   └── UserMapper.java
-│   │               └── service
-│   │                   ├── MenuRestService.java
-│   │                   ├── UserDetailsServicelmpl.java
-│   │                   └── UserService.java
-│   ├── resources
-│   │   ├── application.properties
-│   │   ├── static
-│   │   └── templates
-│   └── webapp
-│       ├── WEB-INF
-│       │   └── views
-│       │       ├── common
-│       │       │   ├── footer.jsp
-│       │       │   └── header.jsp
-│       │       ├── index.jsp
-│       │       ├── login
-│       │       │   └── index.jsp
-│       │       ├── noticeAdd
-│       │       │   └── index.jsp
-│       │       ├── noticeCheck
-│       │       │   └── index.jsp
-│       │       ├── noticeModify
-│       │       │   └── index.jsp
-│       │       └── register
-│       │           └── index.jsp
-│       └── resources
-│           ├── css
-│           │   ├── common
-│           │   │   ├── footer.css
-│           │   │   └── header.css
-│           │   ├── login
-│           │   │   └── style.css
-│           │   ├── noticeAdd
-│           │   │   └── style.css
-│           │   ├── noticeCheck
-│           │   │   └── style.css
-│           │   ├── noticeModify
-│           │   │   └── style.css
-│           │   ├── register
-│           │   │   └── style.css
-│           │   └── style.css
-│           └── js
-│               ├── noticeAdd
-│               │   └── script.js
-│               ├── noticeCheck
-│               │   └── script.js
-│               ├── noticeModify
-│               │   └── script.js
-│               └── script.js
-└── test
-    └── java
-        └── com
-            └── example
-                └── spring_project1
-                    └── SpringProject1ApplicationTests.java
+
+   ├── java
+   │   └── com
+   │       └── example
+   │           └── spring_project1 : 벡엔드
+   │               ├── SpringProject1Application.java
+   │               ├── config
+   │               │   ├── SecurityConfig.java
+   │               │   └── SwaggerConfig.java
+   │               ├── controller
+   │               │   ├── MenuRestController.java
+   │               │   ├── PageController.java
+   │               │   └── UserController.java
+   │               ├── entity
+   │               │   ├── CustomUser.java
+   │               │   ├── Menu.java
+   │               │   ├── Role.java
+   │               │   └── User.java
+   │               ├── mapper
+   │               │   ├── MenuRestMapper.java
+   │               │   └── UserMapper.java
+   │               └── service
+   │                   ├── MenuRestService.java
+   │                   ├── UserDetailsServicelmpl.java
+   │                   └── UserService.java
+   ├── resources
+   │   ├── application.properties
+   │   ├── static
+   │   └── templates
+   │
+   └── webapp : 프론트엔드
+       ├── WEB-INF
+       │   └── views
+       │       ├── common
+       │       │   ├── footer.jsp
+       │       │   └── header.jsp
+       │       ├── index.jsp
+       │       ├── login
+       │       │   └── index.jsp
+       │       ├── noticeAdd
+       │       │   └── index.jsp
+       │       ├── noticeCheck
+       │       │   └── index.jsp
+       │       ├── noticeModify
+       │       │   └── index.jsp
+       │       └── register
+       │           └── index.jsp
+       └── resources
+           ├── css
+           │   ├── common
+           │   │   ├── footer.css
+           │   │   └── header.css
+           │   ├── login
+           │   │   └── style.css
+           │   ├── noticeAdd
+           │   │   └── style.css
+           │   ├── noticeCheck
+           │   │   └── style.css
+           │   ├── noticeModify
+           │   │   └── style.css
+           │   ├── register
+           │   │   └── style.css
+           │   └── style.css
+           └── js
+               ├── noticeAdd
+               │   └── script.js
+               ├── noticeCheck
+               │   └── script.js
+               ├── noticeModify
+               │   └── script.js
+               └── script.js
+
 ```
 
 #### 데이터베이스 구조
