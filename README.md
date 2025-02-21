@@ -18,7 +18,7 @@
 #### 개발 환경
 - os: macOS(Sequoia)
 - envirionment: IntelliJ IDEA, GITHUB
-- framework: Spring Boot 3.4.2 (OpenJDK-21)
+- framework: Spring Boot 3.4.2 (OpenJDK-21), JDBC-Mybatis
 - database: MySQL 9.2.0
 
 #### 주요 기능
